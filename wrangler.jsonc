@@ -1,0 +1,18 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "jci-presence",
+	"compatibility_date": "2026-11-01",
+	"assets": {
+		"directory": "./build",
+		// Toute adresse inconnue renvoie vers index.html (routeur côté navigateur)
+		"not_found_handling": "single-page-application"
+	},
+	// Domaine définitif. Cloudflare crée l'enregistrement DNS et le certificat HTTPS
+	// au déploiement (la zone jcicomee.org doit être dans le même compte Cloudflare,
+	// et aucun enregistrement DNS « presence » ne doit exister avant).
+	// Le QR code doit pointer vers CE domaine, jamais vers *.workers.dev.
+	"routes": [{ "pattern": "presence.jcicomee.org", "custom_domain": true }],
+	// Une seule adresse publique : pas de doublon *.workers.dev que Google pourrait indexer.
+	"workers_dev": false,
+	"preview_urls": false
+}

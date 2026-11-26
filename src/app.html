@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+		<meta name="theme-color" content="#16103f" />
+		<meta name="color-scheme" content="light dark" />
+
+		<!-- SEO : ces balises sont dans le HTML de base (lues sans JavaScript par WhatsApp, Facebook, etc.).
+		     Les pages /admin ajoutent noindex depuis leur layout, et l'en-tête X-Robots-Tag (static/_headers). -->
+		<title>Enregistrement de présence – JCI Comé Excellence</title>
+		<meta
+			name="description"
+			content="Enregistrez votre présence aux événements de JCI Comé Excellence (Bénin) en quelques secondes, depuis votre téléphone."
+		/>
+		<meta name="robots" content="index, follow, max-image-preview:large" />
+		<meta name="author" content="JCI Comé Excellence" />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="JCI Présence" />
+		<meta property="og:locale" content="fr_FR" />
+		<meta property="og:title" content="Enregistrement de présence – JCI Comé Excellence" />
+		<meta
+			property="og:description"
+			content="Enregistrez votre présence aux événements de JCI Comé Excellence en quelques secondes, depuis votre téléphone."
+		/>
+		<meta property="og:url" content="https://presence.jcicomee.org/" />
+		<meta property="og:image" content="https://presence.jcicomee.org/og-image.png" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:image:alt" content="JCI Comé Excellence – Enregistrement de présence" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Enregistrement de présence – JCI Comé Excellence" />
+		<meta
+			name="twitter:description"
+			content="Enregistrez votre présence aux événements de JCI Comé Excellence en quelques secondes, depuis votre téléphone."
+		/>
+		<meta name="twitter:image" content="https://presence.jcicomee.org/og-image.png" />
+
+		<link rel="icon" href="%sveltekit.assets%/favicon.ico" sizes="any" />
+		<link rel="icon" type="image/png" sizes="32x32" href="%sveltekit.assets%/favicon-32.png" />
+		<link rel="apple-touch-icon" href="%sveltekit.assets%/apple-touch-icon.png" />
+		<link rel="manifest" href="%sveltekit.assets%/manifest.webmanifest" />
+
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@graph": [
+					{
+						"@type": "Organization",
+						"@id": "https://jcicomee.org/#organization",
+						"name": "JCI Comé Excellence",
+						"url": "https://jcicomee.org/",
+						"logo": "https://presence.jcicomee.org/icon-512.png"
+					},
+					{
+						"@type": "WebSite",
+						"@id": "https://presence.jcicomee.org/#website",
+						"name": "JCI Présence",
+						"url": "https://presence.jcicomee.org/",
+						"inLanguage": "fr",
+						"publisher": { "@id": "https://jcicomee.org/#organization" }
+					}
+				]
+			}
+		</script>
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="off">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>
